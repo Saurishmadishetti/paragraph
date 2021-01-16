@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title>Paragraph app</title>
+        
+    </head>
+    <body>
+
+        <form>
+            <table width="100%">
+                <tr>
+                    <td width="50%">
+                        <span>1</span> <br>
+                        <input type="text" id="input1" placeholder="input 1"><br>
+                        <span>2</span> <br>
+                        <input type="text" id="input2" placeholder="input 2"><br>
+                        <span>3</span> <br>
+                        <input type="text" id="input3" placeholder="input 3"><br>
+                        <span>4</span> <br>
+                        <input type="text" id="input4" placeholder="input 4"><br>
+                        <span>5</span> <br>
+                        <input type="text" id="input5" placeholder="input 5"><br>
+                        <span>6</span> <br>
+                        <input type="text" id="input6" placeholder="input 6"><br><br>
+                        <input type="button" name="button" value="Click For Paragraph 1"
+                         onclick="showpara1();">
+                    </td>
+                    <td width="50%">
+                        <span>1</span> <br>
+                        <input type="text" id="inputs1" placeholder="input 1"><br>
+                        <span>2</span> <br>
+                        <input type="text" id="inputs2" placeholder="input 2"><br>
+                        <span>3</span> <br>
+                        <input type="text" id="inputs3" placeholder="input 3"><br>
+                        <span>4</span> <br>
+                        <input type="text" id="inputs4" placeholder="input 4"><br>
+                        <span>5</span> <br>
+                        <input type="text" id="inputs5" placeholder="input 5"><br>
+                        <span>6</span> <br>
+                        <input type="text" id="inputs6" placeholder="input 6"><br><br>
+                        <input type="button" name="button" value="Click For Paragraph 2"
+                         onclick="showpara2();">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div id="para">
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            
+        </form>
+
+        <script>
+            function showpara1()
+            {
+                var inputs = [];
+                for (i =1;i<=6;i++)
+                {
+                    inputs.push(document.getElementById('input'+i).value);
+                }
+                document.getElementById('para').innerHTML = inputs.join(".");
+            }
+            function showpara2(){
+                var inputs = [];
+                for (i =1;i<=6;i++)
+                {
+                    inputs.push(document.getElementById('inputs'+i).value);
+                }
+                document.getElementById('para').innerHTML = inputs.join(".");
+            }
+        </script>
+    </body>
+</html>
